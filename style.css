@@ -4,11 +4,14 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     min-height: 100vh;
 
     font-family:
@@ -19,6 +22,7 @@ body {
     color: #ffffff;
 
     background:
+
         radial-gradient(
             circle at 20% 10%,
             rgba(255, 77, 157, 0.35),
@@ -42,31 +46,43 @@ body {
 }
 
 
-/* ================= SCREEN ================= */
+/* =====================================================
+   SCREEN
+   ===================================================== */
 
 .screen {
+
     min-height: 100vh;
 
     display: none;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 20px;
+
 }
 
+
 .screen.active {
+
     display: flex;
 
     animation:
         screenIn 0.6s ease;
+
 }
 
 
-/* ================= CARD ================= */
+/* =====================================================
+   GLASS CARD
+   ===================================================== */
 
 .glass-card {
+
     width: 100%;
+
     max-width: 500px;
 
     padding: 30px 22px;
@@ -79,7 +95,8 @@ body {
         rgba(255, 255, 255, 0.09);
 
     border:
-        1px solid rgba(255, 255, 255, 0.22);
+        1px solid
+        rgba(255, 255, 255, 0.22);
 
     backdrop-filter:
         blur(18px);
@@ -88,45 +105,64 @@ body {
         blur(18px);
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.5);
+        0 25px 70px
+        rgba(0, 0, 0, 0.5);
+
 }
 
 
-/* ================= START ================= */
+/* =====================================================
+   START
+   ===================================================== */
 
 .gift-icon {
+
     font-size: 75px;
 
     margin-bottom: 15px;
 
     animation:
-        floating 2.2s ease-in-out infinite;
+        floating 2.2s
+        ease-in-out infinite;
+
 }
 
+
 .start-card h1 {
+
     font-size: 38px;
 
     margin-bottom: 15px;
+
 }
 
+
 .start-card p {
+
     font-size: 17px;
 
     line-height: 1.7;
+
 }
 
+
 .small-note {
+
     margin-top: 12px;
 
     font-size: 14px !important;
 
     opacity: 0.7;
+
 }
 
 
-/* ================= BUTTON ================= */
+/* =====================================================
+   BUTTON
+   ===================================================== */
 
 button {
+
     border: none;
 
     cursor: pointer;
@@ -140,23 +176,38 @@ button {
     border-radius: 50px;
 
     transition:
+
         transform 0.25s,
+
         box-shadow 0.25s,
+
         opacity 0.25s;
+
 }
+
 
 button:hover {
-    transform: translateY(-3px);
+
+    transform:
+        translateY(-3px);
+
 }
+
 
 button:active {
-    transform: scale(0.95);
+
+    transform:
+        scale(0.95);
+
 }
 
 
-/* ================= OPEN ================= */
+/* =====================================================
+   OPEN BUTTON
+   ===================================================== */
 
 #openBtn {
+
     margin-top: 25px;
 
     padding: 15px 30px;
@@ -164,6 +215,7 @@ button:active {
     color: white;
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -171,13 +223,19 @@ button:active {
         );
 
     box-shadow:
-        0 10px 30px rgba(255, 30, 120, 0.4);
+
+        0 10px 30px
+        rgba(255, 30, 120, 0.4);
+
 }
 
 
-/* ================= COUNTER ================= */
+/* =====================================================
+   COUNTER
+   ===================================================== */
 
 .counter {
+
     display: inline-block;
 
     padding: 7px 16px;
@@ -192,21 +250,29 @@ button:active {
     font-size: 14px;
 
     font-weight: bold;
+
 }
 
 
-/* ================= MEMORY ================= */
+/* =====================================================
+   MEMORY
+   ===================================================== */
 
 .memory-card h2 {
+
     font-size: 25px;
 
     margin-bottom: 20px;
+
 }
 
 
-/* ================= PHOTO ================= */
+/* =====================================================
+   PHOTO
+   ===================================================== */
 
 .photo-wrapper {
+
     position: relative;
 
     width: 100%;
@@ -224,99 +290,143 @@ button:active {
     background: #090006;
 
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.5);
+
+        0 15px 45px
+        rgba(0, 0, 0, 0.5);
+
 }
 
+
 #memoryPhoto {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
     display: block;
+
 }
 
+
 #scratchCanvas {
+
     position: absolute;
 
     inset: 0;
 
     width: 100%;
+
     height: 100%;
 
     touch-action: none;
 
     cursor: crosshair;
+
 }
 
 
-/* ================= HINT ================= */
+/* =====================================================
+   SCRATCH HINT
+   ===================================================== */
 
 .scratch-hint {
+
     margin-top: 14px;
 
     font-size: 14px;
 
     opacity: 0.75;
+
 }
 
 
-/* ================= SPECIAL MESSAGE ================= */
+/* =====================================================
+   SPECIAL MESSAGE
+   ===================================================== */
 
 .special-message {
+
     display: none;
 
     margin-top: 22px;
 
-    padding: 20px 17px;
+    padding: 22px 18px;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     background:
+
         linear-gradient(
             135deg,
-            rgba(255, 79, 163, 0.18),
+            rgba(255, 79, 163, 0.20),
             rgba(255, 255, 255, 0.07)
         );
 
     border:
-        1px solid rgba(255, 158, 205, 0.3);
+
+        1px solid
+        rgba(255, 158, 205, 0.35);
 
     box-shadow:
-        inset 0 0 30px rgba(255, 50, 140, 0.05);
+
+        inset 0 0 30px
+        rgba(255, 50, 140, 0.06),
+
+        0 10px 35px
+        rgba(0, 0, 0, 0.25);
 
     animation:
         messageIn 0.7s ease;
+
 }
+
 
 .special-message.show {
+
     display: block;
+
 }
+
 
 .message-icon {
-    font-size: 32px;
+
+    font-size: 34px;
 
     margin-bottom: 8px;
+
 }
+
 
 .special-message h3 {
-    font-size: 20px;
 
-    margin-bottom: 9px;
+    font-size: 21px;
+
+    margin-bottom: 12px;
+
+    color: #ffb8d9;
+
 }
+
 
 .special-message p {
-    font-size: 15px;
 
-    line-height: 1.8;
+    font-size: 16px;
+
+    line-height: 1.85;
 
     color: #ffe5f2;
+
 }
 
 
-/* ================= NEXT ================= */
+/* =====================================================
+   NEXT BUTTON
+   ===================================================== */
 
 .next-btn {
+
     display: none;
 
     margin: 20px auto 0;
@@ -326,6 +436,7 @@ button:active {
     color: white;
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -333,57 +444,82 @@ button:active {
         );
 
     box-shadow:
-        0 8px 25px rgba(255, 30, 120, 0.3);
+
+        0 8px 25px
+        rgba(255, 30, 120, 0.3);
+
 }
+
 
 .next-btn.show {
+
     display: block;
+
 }
 
 
-/* ================= FINAL ================= */
+/* =====================================================
+   FINAL
+   ===================================================== */
 
 .final-heart {
+
     font-size: 72px;
 
     animation:
         heartbeat 1.2s infinite;
+
 }
 
+
 .final-card h1 {
+
     font-size: 31px;
 
     margin-top: 10px;
+
 }
 
+
 .final-description {
+
     margin-top: 15px;
 
     line-height: 1.7;
 
     opacity: 0.9;
+
 }
 
+
 .final-card h2 {
+
     margin-top: 20px;
 
     font-size: 28px;
 
     color: #ffb8da;
+
 }
 
+
 .choose-text {
+
     margin-top: 10px;
 
     font-size: 14px;
 
     opacity: 0.7;
+
 }
 
 
-/* ================= ANSWERS ================= */
+/* =====================================================
+   YES / NO
+   ===================================================== */
 
 .answer-buttons {
+
     display: flex;
 
     justify-content: center;
@@ -391,18 +527,25 @@ button:active {
     gap: 15px;
 
     margin-top: 25px;
+
 }
 
+
 .answer-buttons button {
+
     min-width: 125px;
 
     padding: 14px 22px;
+
 }
 
+
 .yes-btn {
+
     color: white;
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
@@ -410,54 +553,80 @@ button:active {
         );
 
     box-shadow:
-        0 10px 28px rgba(255, 0, 90, 0.35);
+
+        0 10px 28px
+        rgba(255, 0, 90, 0.35);
+
 }
 
+
 .no-btn {
+
     color: white;
 
     background:
         rgba(255, 255, 255, 0.12);
 
     border:
-        1px solid rgba(255, 255, 255, 0.2);
+
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
 }
 
 
-/* ================= FEEDBACK ================= */
+/* =====================================================
+   FEEDBACK
+   ===================================================== */
 
 .feedback-box {
+
     display: none;
 
     margin-top: 25px;
 
     animation:
         messageIn 0.5s ease;
+
 }
+
 
 .feedback-box.show {
+
     display: block;
+
 }
 
+
 #feedbackEmoji {
+
     font-size: 35px;
 
     margin-bottom: 8px;
+
 }
 
+
 .feedback-box h3 {
+
     font-size: 22px;
 
     margin-bottom: 8px;
+
 }
 
+
 .feedback-box p {
+
     font-size: 14px;
 
     line-height: 1.6;
+
 }
 
+
 textarea {
+
     width: 100%;
 
     min-height: 110px;
@@ -481,18 +650,26 @@ textarea {
     border-radius: 16px;
 
     border:
-        1px solid rgba(255,255,255,0.25);
+
+        1px solid
+        rgba(255,255,255,0.25);
 
     background:
         rgba(0,0,0,0.25);
+
 }
+
 
 textarea::placeholder {
+
     color:
         rgba(255,255,255,0.55);
+
 }
 
+
 .submit-btn {
+
     margin-top: 15px;
 
     padding: 14px 25px;
@@ -500,55 +677,79 @@ textarea::placeholder {
     color: white;
 
     background:
+
         linear-gradient(
             135deg,
             #ff4fa3,
             #ff176c
         );
+
 }
 
+
 .submit-btn:disabled {
+
     opacity: 0.6;
 
     cursor: not-allowed;
+
 }
+
 
 #submitStatus {
+
     margin-top: 12px;
+
 }
 
 
-/* ================= THANK YOU ================= */
+/* =====================================================
+   THANK YOU
+   ===================================================== */
 
 .thank-heart {
+
     font-size: 80px;
 
     animation:
         heartbeat 1.2s infinite;
+
 }
 
+
 .thank-card h1 {
+
     font-size: 35px;
 
     margin: 15px 0;
+
 }
+
 
 .thank-card p {
+
     line-height: 1.8;
+
 }
 
+
 .heart-row {
+
     margin-top: 22px;
 
     font-size: 25px;
 
     letter-spacing: 7px;
+
 }
 
 
-/* ================= FLOATING HEARTS ================= */
+/* =====================================================
+   FLOATING HEARTS
+   ===================================================== */
 
 #heartsContainer {
+
     position: fixed;
 
     inset: 0;
@@ -558,143 +759,228 @@ textarea::placeholder {
     overflow: hidden;
 
     z-index: 999;
+
 }
 
+
 .floating-heart {
+
     position: absolute;
 
     bottom: -30px;
 
     animation:
-        heartRise linear forwards;
+        heartRise
+        linear
+        forwards;
+
 }
 
 
-/* ================= ANIMATIONS ================= */
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
 
 @keyframes floating {
 
     0%,
     100% {
+
         transform:
             translateY(0);
+
     }
 
     50% {
+
         transform:
             translateY(-12px);
+
     }
+
 }
+
 
 @keyframes heartbeat {
 
     0%,
     100% {
+
         transform:
             scale(1);
+
     }
 
     50% {
+
         transform:
             scale(1.15);
+
     }
+
 }
+
 
 @keyframes heartRise {
 
     0% {
+
         transform:
             translateY(0)
             rotate(0deg);
 
         opacity: 0;
+
     }
 
     15% {
+
         opacity: 0.85;
+
     }
 
     100% {
+
         transform:
             translateY(-110vh)
             rotate(360deg);
 
         opacity: 0;
+
     }
+
 }
+
 
 @keyframes screenIn {
 
     from {
+
         opacity: 0;
 
         transform:
             translateY(15px);
+
     }
 
     to {
+
         opacity: 1;
 
         transform:
             translateY(0);
+
     }
+
 }
+
 
 @keyframes messageIn {
 
     from {
+
         opacity: 0;
 
         transform:
             translateY(20px)
             scale(0.96);
+
     }
 
     to {
+
         opacity: 1;
 
         transform:
             translateY(0)
             scale(1);
+
     }
+
 }
 
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE
+   ===================================================== */
 
 @media (max-width: 600px) {
 
     .screen {
+
         padding: 14px;
+
+        align-items: center;
+
     }
 
+
     .glass-card {
+
         padding: 25px 15px;
 
         border-radius: 25px;
+
     }
+
 
     .start-card h1 {
+
         font-size: 32px;
+
     }
+
 
     .memory-card h2 {
+
         font-size: 22px;
+
     }
+
+
+    .special-message {
+
+        padding: 20px 15px;
+
+    }
+
+
+    .special-message p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+    }
+
 
     .final-card h1 {
+
         font-size: 27px;
+
     }
+
 
     .final-card h2 {
+
         font-size: 24px;
+
     }
+
 
     .answer-buttons {
+
         gap: 10px;
+
     }
 
+
     .answer-buttons button {
+
         min-width: 115px;
+
+        padding: 13px 16px;
+
     }
+
 }
