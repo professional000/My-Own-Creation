@@ -12,7 +12,15 @@ const FORMSPREE_URL =
 
 
 /* =====================================================
-   ONLY 6 PHOTOS
+   BACKGROUND SONG
+   ===================================================== */
+
+const bgMusic =
+    document.getElementById("bgMusic");
+
+
+/* =====================================================
+   6 PHOTOS + SPECIAL MESSAGES
    ===================================================== */
 
 const memories = [
@@ -20,73 +28,93 @@ const memories = [
     {
         image: "photo11.jpg",
 
-        heading: "Our First Memory 💬",
+        heading: "Memory 1 ❤️",
 
-        messageTitle: "Something Special 😁",
+        messageTitle: "சின்ன ஒரு உண்மை 😏❤️",
 
         message:
-            "சில memories-க்கு பெரிய reason தேவையில்லை... " +
-            "அதை நினைக்கும்போது நம்ம முகத்தில் வரும் அந்த ஒரு smile போதும். ❤️"
+            "உன்னை பார்த்ததும் காதல் வந்துச்சு... " +
+            "அதுக்கு காரணம் என்னன்னு தேடினேன், கிடைக்கல... " +
+            "நீ அழகா இருக்குறது தான் problem போல! 😂❤️"
     },
+
 
     {
         image: "photo12.jpg",
 
-        heading: "A Beautiful Moment 🤫",
+        heading: "Memory 2 😂💞",
 
-        messageTitle: "Keep This Memory 😊",
+        messageTitle: "First Booking! ❤️😂",
 
         message:
-            "இந்த photo ஒரு photo மட்டும் இல்ல... " +
-            "எப்போதாவது இதைப் பார்த்தாலும் இந்த moment நினைவுக்கு வரணும். 💕"
+            "உன்னை காதலிக்கலாமா என்று யோசித்தேன்... " +
+            "அப்புறம் நினைச்சேன், " +
+            "இவ்வளவு அழகான பொண்ணை வேற யாராவது தூக்கிட்டு போயிட்டா? " +
+            "அதனால்... நான் தான் first booking! ❤️😂"
     },
+
 
     {
         image: "photo13.jpg",
 
-        heading: "A Moment To Remember 😆",
+        heading: "Memory 3 😎❤️",
 
-        messageTitle: "You Are Special 😋",
+        messageTitle: "ஒரு சின்ன Promise ❤️",
 
         message:
-            "நிறைய பேர் நம்ம வாழ்க்கையில் வரலாம்... " +
-            "ஆனா சில பேர் மட்டும் தான் நம்ம memories-ல special place பிடிப்பாங்க. ❤️"
+            "நீ என் வாழ்க்கைக்கு வந்தா " +
+            "Life செம்மையாகிடும்... " +
+            "வரலன்னா பரவாயில்லை, " +
+            "நான் தினமும் உன்னை தொந்தரவு பண்ணி வர வச்சிடுவேன்! 😂💕"
     },
+
 
     {
         image: "photo14.jpg",
 
-        heading: "One More Beautiful Memory 🥳",
+        heading: "Memory 4 🙈❤️",
 
-        messageTitle: "A Little Secret 😅",
+        messageTitle: "First Question ❤️😂",
 
         message:
-            "உன்னிடம் சொல்லாமல் வைத்திருந்த ஒரு small feeling... " +
-            "இந்த memory-யோட சேர்த்து இன்னும் special ஆகிடுச்சு. 💗"
+            "உன்னை பார்த்த நாள் முதல் " +
+            "என் மனசு ஒரே கேள்வி கேக்குது... " +
+            "“இவந்தான் உன் ஆளா?” " +
+            "நானும் சொல்லிட்டேன்... " +
+            "“வேற option ஏதாவது இருக்கா? இவளே போதும்!” 😂❤️"
     },
+
 
     {
         image: "photo15.jpg",
 
-        heading: "Almost There 😜",
+        heading: "Memory 5 😜💞",
 
-        messageTitle: "Just One More... 🤐",
+        messageTitle: "காதல் வந்ததுக்கு காரணம் ❤️",
 
         message:
-            "இன்னும் ஒரு memory மட்டும் தான்... " +
-            "அதுக்கப்புறம் நான் ரொம்ப நாளா சொல்ல நினைத்த ஒரு கேள்வியை கேட்கப் போறேன். ❤️"
+            "காதல் வந்ததுக்கு நான் காரணம் இல்லை... " +
+            "நீ தான் காரணம்! " +
+            "அதனால் தண்டனையாக " +
+            "என் காதலை accept பண்ணி " +
+            "என்னோட life-long-ஆ இருக்கணும்! 😂❤️"
     },
+
 
     {
         image: "photo16.jpg",
 
-        heading: "The Final Memory 😶‍🌫️",
+        heading: "Memory 6 🥰🔥",
 
-        messageTitle: "Now It's Time... 🫠",
+        messageTitle: "Final Question ❤️",
 
         message:
-            "இந்த 6 memories-யும் பார்த்த பிறகு... " +
-            "என் மனதில் இருப்பதை மறைக்காமல் உன்னிடம் கேட்கப் போறேன். ❤️"
+            "உன்னை காதலிக்கிறேன் என்று " +
+            "சொல்ல வந்தேன்... " +
+            "ஆனா நீ “No” என்று சொன்னா? 😶 " +
+            "பரவாயில்லை... " +
+            "“No” சொல்லுற practice முடிச்சதும் " +
+            "“Yes” சொல்லலாம்! 😂❤️"
     }
 
 ];
@@ -190,6 +218,8 @@ let selectedAnswer = "";
 
 let alreadySubmitted = false;
 
+let memoryRevealed = false;
+
 
 /* =====================================================
    SHOW SCREEN
@@ -211,7 +241,7 @@ function showScreen(screen) {
 
 
 /* =====================================================
-   OPEN
+   OPEN SURPRISE + PLAY SONG
    ===================================================== */
 
 openBtn.addEventListener(
@@ -219,6 +249,28 @@ openBtn.addEventListener(
     () => {
 
         currentMemory = 0;
+
+        /*
+         * Start song after user interaction.
+         * This works better with mobile browser autoplay rules.
+         */
+
+        if (bgMusic) {
+
+            bgMusic.volume = 0.45;
+
+            bgMusic.play()
+                .catch(error => {
+
+                    console.log(
+                        "Music could not start:",
+                        error
+                    );
+
+                });
+
+        }
+
 
         showScreen(memoryScreen);
 
@@ -237,36 +289,49 @@ function loadMemory() {
     const memory =
         memories[currentMemory];
 
+
     currentNumber.textContent =
         currentMemory + 1;
+
 
     memoryHeading.textContent =
         memory.heading;
 
+
     memoryPhoto.src =
         memory.image;
+
 
     messageTitle.textContent =
         memory.messageTitle;
 
+
     messageText.textContent =
         memory.message;
+
 
     specialMessage.classList.remove(
         "show"
     );
 
+
     nextBtn.classList.remove(
         "show"
     );
 
+
     scratchHint.style.display =
         "block";
 
+
     scratchCount = 0;
+
+    memoryRevealed = false;
+
 
     scratchCanvas.style.pointerEvents =
         "auto";
+
 
     setupScratch();
 
@@ -279,10 +344,6 @@ function loadMemory() {
 
 function setupScratch() {
 
-    /*
-     * Wait until canvas has its actual size.
-     */
-
     requestAnimationFrame(() => {
 
         scratchCanvas.width =
@@ -291,11 +352,12 @@ function setupScratch() {
         scratchCanvas.height =
             scratchCanvas.offsetHeight;
 
+
         ctx.globalCompositeOperation =
             "source-over";
 
 
-        /* Cover */
+        /* ================= COVER ================= */
 
         const gradient =
             ctx.createLinearGradient(
@@ -305,23 +367,28 @@ function setupScratch() {
                 scratchCanvas.height
             );
 
+
         gradient.addColorStop(
             0,
             "#ff4c9b"
         );
+
 
         gradient.addColorStop(
             0.5,
             "#871644"
         );
 
+
         gradient.addColorStop(
             1,
             "#ff7fba"
         );
 
+
         ctx.fillStyle =
             gradient;
+
 
         ctx.fillRect(
             0,
@@ -331,16 +398,19 @@ function setupScratch() {
         );
 
 
-        /* Scratch text */
+        /* ================= TEXT ================= */
 
         ctx.fillStyle =
             "rgba(255,255,255,0.95)";
 
+
         ctx.textAlign =
             "center";
 
+
         ctx.textBaseline =
             "middle";
+
 
         const fontSize =
             Math.max(
@@ -348,8 +418,10 @@ function setupScratch() {
                 scratchCanvas.width * 0.06
             );
 
+
         ctx.font =
             `bold ${fontSize}px Arial`;
+
 
         ctx.fillText(
             "Scratch To Reveal ❤️",
@@ -371,8 +443,11 @@ function getPosition(event) {
     const rect =
         scratchCanvas.getBoundingClientRect();
 
+
     let clientX;
+
     let clientY;
+
 
     if (event.touches) {
 
@@ -382,7 +457,9 @@ function getPosition(event) {
         clientY =
             event.touches[0].clientY;
 
-    } else {
+    }
+
+    else {
 
         clientX =
             event.clientX;
@@ -391,6 +468,7 @@ function getPosition(event) {
             event.clientY;
 
     }
+
 
     return {
 
@@ -414,29 +492,39 @@ function scratch(event) {
     if (!drawing)
         return;
 
+
+    if (memoryRevealed)
+        return;
+
+
     const pos =
         getPosition(event);
+
 
     ctx.globalCompositeOperation =
         "destination-out";
 
+
     ctx.beginPath();
+
 
     ctx.arc(
         pos.x,
         pos.y,
-        30,
+        32,
         0,
         Math.PI * 2
     );
 
+
     ctx.fill();
+
 
     scratchCount++;
 
 
     /*
-     * Enough scratching = reveal
+     * Reveal after enough scratching
      */
 
     if (scratchCount >= 35) {
@@ -449,7 +537,7 @@ function scratch(event) {
 
 
 /* =====================================================
-   MOUSE
+   MOUSE EVENTS
    ===================================================== */
 
 scratchCanvas.addEventListener(
@@ -461,6 +549,7 @@ scratchCanvas.addEventListener(
     }
 );
 
+
 scratchCanvas.addEventListener(
     "mouseup",
     () => {
@@ -469,6 +558,7 @@ scratchCanvas.addEventListener(
 
     }
 );
+
 
 scratchCanvas.addEventListener(
     "mouseleave",
@@ -479,6 +569,7 @@ scratchCanvas.addEventListener(
     }
 );
 
+
 scratchCanvas.addEventListener(
     "mousemove",
     scratch
@@ -486,7 +577,7 @@ scratchCanvas.addEventListener(
 
 
 /* =====================================================
-   TOUCH
+   TOUCH EVENTS
    ===================================================== */
 
 scratchCanvas.addEventListener(
@@ -532,10 +623,17 @@ scratchCanvas.addEventListener(
 
 
 /* =====================================================
-   REVEAL
+   REVEAL MEMORY
    ===================================================== */
 
 function revealMemory() {
+
+    if (memoryRevealed)
+        return;
+
+
+    memoryRevealed = true;
+
 
     /*
      * Clear scratch layer
@@ -558,8 +656,8 @@ function revealMemory() {
 
 
     /*
-     * IMPORTANT:
-     * Special message appears BELOW photo
+     * SPECIAL MESSAGE
+     * appears below photo
      */
 
     setTimeout(() => {
@@ -568,9 +666,11 @@ function revealMemory() {
             "show"
         );
 
+
         nextBtn.classList.add(
             "show"
         );
+
 
     }, 250);
 
@@ -590,6 +690,7 @@ nextBtn.addEventListener(
 
         currentMemory++;
 
+
         /*
          * After exactly 6 photos
          */
@@ -599,9 +700,13 @@ nextBtn.addEventListener(
             memories.length
         ) {
 
-            showScreen(finalScreen);
+            showScreen(
+                finalScreen
+            );
+
 
             createHeartBurst();
+
 
             return;
 
@@ -623,19 +728,24 @@ yesBtn.addEventListener(
     () => {
 
         selectedAnswer =
-            "YES 😂";
+            "YES 😂❤️";
+
 
         feedbackEmoji.textContent =
             "💖";
 
+
         feedbackTitle.textContent =
             "You Said YES! ❤️";
+
 
         feedbackDescription.textContent =
             "உன் answer ரொம்ப special. " +
             "உன் மனதில் இருக்கிறதை ஒரு small feedback-ஆ சொல்லு. 💕";
 
+
         openFeedback();
+
 
         createHeartBurst();
 
@@ -652,17 +762,21 @@ noBtn.addEventListener(
     () => {
 
         selectedAnswer =
-            "NO 😭";
+            "NO 😭💔";
+
 
         feedbackEmoji.textContent =
             "💌";
 
+
         feedbackTitle.textContent =
             "Thank You For Being Honest ❤️";
+
 
         feedbackDescription.textContent =
             "உன் answer-ஐ நான் respect பண்ணுகிறேன். " +
             "உன் honest feedback-ஐ சொல்லலாம். ❤️";
+
 
         openFeedback();
 
@@ -671,13 +785,14 @@ noBtn.addEventListener(
 
 
 /* =====================================================
-   FEEDBACK OPEN
+   OPEN FEEDBACK
    ===================================================== */
 
 function openFeedback() {
 
     answerButtons.style.display =
         "none";
+
 
     feedbackBox.classList.add(
         "show"
@@ -701,6 +816,7 @@ submitBtn.addEventListener(
         submitBtn.disabled =
             true;
 
+
         submitBtn.textContent =
             "Sending...";
 
@@ -710,7 +826,7 @@ submitBtn.addEventListener(
 
 
         /*
-         * Formspree data
+         * Create Formspree data
          */
 
         const formData =
@@ -722,11 +838,13 @@ submitBtn.addEventListener(
             selectedAnswer
         );
 
+
         formData.append(
             "feedback",
             userFeedback ||
             "No additional feedback"
         );
+
 
         formData.append(
             "time",
@@ -734,6 +852,7 @@ submitBtn.addEventListener(
                 "en-IN"
             )
         );
+
 
         formData.append(
             "website",
@@ -773,7 +892,7 @@ submitBtn.addEventListener(
 
 
             /*
-             * Success page
+             * YES success
              */
 
             if (
@@ -785,7 +904,14 @@ submitBtn.addEventListener(
                     "உன் YES answer மற்றும் feedback எனக்கு கிடைத்துவிட்டது. ❤️ " +
                     "Thank you for this beautiful moment! 💕";
 
-            } else {
+            }
+
+
+            /*
+             * NO success
+             */
+
+            else {
 
                 thankMessage.textContent =
                     "உன் NO answer மற்றும் feedback எனக்கு கிடைத்துவிட்டது. ❤️ " +
@@ -798,16 +924,26 @@ submitBtn.addEventListener(
                 thankYouScreen
             );
 
+
             createHeartBurst();
 
 
-        } catch (error) {
+        }
+
+        catch (error) {
+
+            console.error(
+                error
+            );
+
 
             submitStatus.textContent =
                 "Something went wrong. Please try again.";
 
+
             submitBtn.disabled =
                 false;
+
 
             submitBtn.textContent =
                 "Send My Answer 💌";
@@ -827,17 +963,20 @@ function createFloatingHeart() {
     const heart =
         document.createElement("div");
 
+
     heart.className =
         "floating-heart";
 
 
     const emojis = [
+
         "❤️",
         "💕",
         "💖",
         "💗",
         "💓",
         "💞"
+
     ];
 
 
@@ -865,7 +1004,9 @@ function createFloatingHeart() {
 
 
     document
-        .getElementById("heartsContainer")
+        .getElementById(
+            "heartsContainer"
+        )
         .appendChild(heart);
 
 
@@ -881,7 +1022,9 @@ function createFloatingHeart() {
 }
 
 
-/* Continuous hearts */
+/* =====================================================
+   CONTINUOUS HEARTS
+   ===================================================== */
 
 setInterval(
     createFloatingHeart,
@@ -897,7 +1040,7 @@ function createHeartBurst() {
 
     for (
         let i = 0;
-        i < 20;
+        i < 25;
         i++
     ) {
 
@@ -908,4 +1051,4 @@ function createHeartBurst() {
 
     }
 
-          }
+}
