@@ -728,7 +728,7 @@ yesBtn.addEventListener(
     () => {
 
         selectedAnswer =
-            "YES 😂❤️";
+            "YES 😊💞";
 
 
         feedbackEmoji.textContent =
@@ -901,8 +901,8 @@ submitBtn.addEventListener(
             ) {
 
                 thankMessage.textContent =
-                    "உன் YES answer மற்றும் feedback எனக்கு கிடைத்துவிட்டது. ❤️ " +
-                    "Thank you for this beautiful moment! 💕";
+                    "உன் YES answer மற்றும் feedback எனக்கு கிடைத்துவிட்டது. 🥰😘 " +
+                    "Thank you for this beautiful moment! 💕🙈";
 
             }
 
@@ -914,8 +914,8 @@ submitBtn.addEventListener(
             else {
 
                 thankMessage.textContent =
-                    "உன் NO answer மற்றும் feedback எனக்கு கிடைத்துவிட்டது. ❤️ " +
-                    "Thank you for being honest.";
+                    "உன் NO answer மற்றும் feedback எனக்கு கிடைத்துவிட்டது. 💔😭 " +
+                    "Thank you for being honest. 🤒🤕";
 
             }
 
