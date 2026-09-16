@@ -2,31 +2,51 @@
 <html lang="ta">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#17000d">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>A Special Memory 🥳</title>
+    <meta name="theme-color"
+          content="#17000d">
 
-    <link rel="stylesheet" href="style.css">
+    <title>A Special Memory 🥰</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
 
 <body>
 
-    <!-- Floating Hearts -->
+    <!-- ================= MUSIC ================= -->
+
+    <audio id="bgMusic"
+           src="song.mp3"
+           loop>
+    </audio>
+
+
+    <!-- ================= FLOATING HEARTS ================= -->
+
     <div id="heartsContainer"></div>
 
 
-    <!-- ================= START ================= -->
+    <!-- ================= START SCREEN ================= -->
 
-    <section class="screen active" id="startScreen">
+    <section class="screen active"
+             id="startScreen">
 
         <div class="glass-card start-card">
 
-            <div class="gift-icon">💌</div>
+            <div class="gift-icon">
+                💌
+            </div>
 
-            <h1>Open This ❤️</h1>
+            <h1>
+                Open This ❤️
+            </h1>
 
             <p>
                 உனக்காக நான் உருவாக்கிய<br>
@@ -34,7 +54,7 @@
             </p>
 
             <p class="small-note">
-                இதில் 6 special memories இருக்கு 😛
+                இதில் 6 special memories இருக்கு 🥰
             </p>
 
             <button id="openBtn">
@@ -46,22 +66,27 @@
     </section>
 
 
-    <!-- ================= MEMORY ================= -->
+    <!-- ================= MEMORY SCREEN ================= -->
 
-    <section class="screen" id="memoryScreen">
+    <section class="screen"
+             id="memoryScreen">
 
         <div class="glass-card memory-card">
 
             <div class="counter">
-                Memory <span id="currentNumber">1</span> of 6
+                Memory
+                <span id="currentNumber">1</span>
+                of 6
             </div>
 
+
             <h2 id="memoryHeading">
-                A Special Memory 🤪
+                A Special Memory ❤️
             </h2>
 
 
-            <!-- Photo -->
+            <!-- PHOTO -->
+
             <div class="photo-wrapper">
 
                 <img
@@ -70,25 +95,31 @@
                     alt="Special Memory"
                 >
 
-                <canvas id="scratchCanvas"></canvas>
+                <canvas
+                    id="scratchCanvas">
+                </canvas>
 
             </div>
 
+
+            <!-- SCRATCH HINT -->
 
             <p class="scratch-hint">
                 👆 Photo-வை scratch பண்ணி reveal பண்ணுங்கள்
             </p>
 
 
-            <!-- Special Message -->
-            <div id="specialMessage" class="special-message">
+            <!-- ================= SPECIAL MESSAGE ================= -->
+
+            <div id="specialMessage"
+                 class="special-message">
 
                 <div class="message-icon">
                     💖
                 </div>
 
                 <h3 id="messageTitle">
-                    A Special Message
+                    Special Message ❤️
                 </h3>
 
                 <p id="messageText">
@@ -97,9 +128,13 @@
             </div>
 
 
-            <!-- Next -->
-            <button id="nextBtn" class="next-btn">
+            <!-- NEXT -->
+
+            <button id="nextBtn"
+                    class="next-btn">
+
                 Next Memory ❤️
+
             </button>
 
         </div>
@@ -107,9 +142,10 @@
     </section>
 
 
-    <!-- ================= FINAL QUESTION ================= -->
+    <!-- ================= FINAL SCREEN ================= -->
 
-    <section class="screen" id="finalScreen">
+    <section class="screen"
+             id="finalScreen">
 
         <div class="glass-card final-card">
 
@@ -122,46 +158,61 @@
             </h1>
 
             <p class="final-description">
+
                 6 memories-யும் பார்த்தாச்சு...
                 <br>
                 இப்போ உன்னிடம் ஒரு உண்மையான கேள்வி.
+
             </p>
 
+
             <h2>
-                What think You ? 🧐
+                What do you think? 🧐
             </h2>
 
+
             <p class="choose-text">
-                உன் மனதில் இருப்பதை honest-ஆ choose பண்ணு 😪
+                உன் மனதில் இருப்பதை honest-ஆ choose பண்ணு ❤️
             </p>
 
 
             <!-- YES / NO -->
 
-            <div id="answerButtons" class="answer-buttons">
+            <div id="answerButtons"
+                 class="answer-buttons">
 
-                <button id="yesBtn" class="yes-btn">
-                    YES 😂
+                <button id="yesBtn"
+                        class="yes-btn">
+
+                    YES 😂❤️
+
                 </button>
 
-                <button id="noBtn" class="no-btn">
-                    NO 😭
+
+                <button id="noBtn"
+                        class="no-btn">
+
+                    NO 😭💔
+
                 </button>
 
             </div>
 
 
-            <!-- Feedback -->
+            <!-- ================= FEEDBACK ================= -->
 
-            <div id="feedbackBox" class="feedback-box">
+            <div id="feedbackBox"
+                 class="feedback-box">
 
                 <div id="feedbackEmoji">
                     💌
                 </div>
 
+
                 <h3 id="feedbackTitle">
-                    Thank You 🙏
+                    Thank You ❤️
                 </h3>
+
 
                 <p id="feedbackDescription">
                 </p>
@@ -169,15 +220,20 @@
 
                 <textarea
                     id="feedback"
-                    placeholder="உன் மனதில் என்ன இருக்கிறது? 🙄"
-                ></textarea>
+                    placeholder="உன் மனதில் என்ன இருக்கிறது? ❤️">
+                </textarea>
 
 
-                <button id="submitBtn" class="submit-btn">
+                <button id="submitBtn"
+                        class="submit-btn">
+
                     Send My Answer 💌
+
                 </button>
 
-                <p id="submitStatus"></p>
+
+                <p id="submitStatus">
+                </p>
 
             </div>
 
@@ -188,7 +244,8 @@
 
     <!-- ================= THANK YOU ================= -->
 
-    <section class="screen" id="thankYouScreen">
+    <section class="screen"
+             id="thankYouScreen">
 
         <div class="glass-card thank-card">
 
@@ -196,13 +253,16 @@
                 💖
             </div>
 
+
             <h1>
-                Thank You 🙏
+                Thank You ❤️
             </h1>
+
 
             <p id="thankMessage">
                 உன் answer எனக்கு கிடைத்துவிட்டது.
             </p>
+
 
             <div class="heart-row">
                 ❤️ 💕 💖 💗 💓
